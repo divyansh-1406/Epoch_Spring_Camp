@@ -1,0 +1,19 @@
+Neural_Recommendor_System:
+
+Basics used:
+Loss - Binary Cross Entropy 
+Optimizer - Adam Optimizer
+Got used to work with negative sampling and tweaked the number of negative samples to see how it affected the performance of the model
+For evaluation , used the HIT@K metric 
+(for both the baseline and the MLP model)
+
+The MLP model performed better than the baseline matrix factorization model because of its ability to handle complex non-linear data better.
+On evaluation with the embedding divisions to be 10 and the Hyperparameter in HIT@K evaluation metric to be 10 as well for both the models, MLP seemed to perform way better with the score of 0.79 as compared to a score of 0.27 of the MF model.
+
+
+On increasing the embedding dimensions or the K value (Hyperparameter) the loss decreases and the score increases to some extent until the model starts overfitting. Increasing the embedding dimension to 1000 increased the score to 0.96 which indicates overfitting and increases the computation time to about 20 minutes as compared to about a minute under reasonable values of embedding dimension. 
+On increasing the number of sample negatives the model performs better but the computation increases by a lot. 
+
+
+
+
